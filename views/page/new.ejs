@@ -1,0 +1,36 @@
+<% layout("layout/boilerplate") %>
+
+
+    <div class="row mt-4 mb-1"">
+        <h1 class=" text-center">Add Comment</h1>
+        <div class="col-6 mt-3">
+            <img class="img-fluid"
+                src="https://images.unsplash.com/photo-1544536871-6e891baa163f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                alt="view">
+        </div>
+        <div class="col-6 mt-3">
+            <form action="/comments" method="POST" class="validated-form" novalidate>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Enter a username:</label>
+                    <input type="text" class="form-control" id="username" name="comment[username]"
+                        placeholder="username" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="comment" class="form-label">Write a comment:</label>
+                    <textarea name="comment[text]" class="form-control" id="comment" cols="30" rows="2"
+                        required></textarea>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <a href="/comments" class="btn btn-primary">Back</a>
+                <button class="btn btn-success">Add comment</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- JS code, for form validation, is in the boilerplate.ejs file -->

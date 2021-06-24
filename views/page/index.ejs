@@ -1,0 +1,57 @@
+<% layout("layout/boilerplate") %>
+
+
+    <div class="row mt-4 mb-1"">
+        <div class=" col-6">
+        <img class="img-fluid"
+            src="https://images.unsplash.com/photo-1544536871-6e891baa163f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+            alt="view">
+    </div>
+    <div class="col-6">
+        <% for (comment of comments) { %>
+            <div class="card-header">
+                <%=comment.username %>
+            </div>
+            <div class="card-body">
+                <p>
+                    <%=comment.text %>
+                </p>
+                <a class="btn btn-light d-inline" href="/comments/<%= comment._id%>">details</a>
+            </div>
+            <% } %>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="row">
+        <div class="col-6">
+            <img src="https://images.unsplash.com/photo-1544536871-6e891baa163f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                alt="view">
+        </div>
+        <div class="col-6 offset-3">
+            <% for (comment of comments) { %>
+                <div class="card-header">
+                    <%=comment.username %>
+                </div>
+                <div class="card-body">
+                    <p>
+                        <%=comment.text %>
+                    </p>
+                    <a class="btn btn-light d-inline" href="/comments/<%= comment._id%>">details</a>
+                </div>
+                <% } %>
+        </div>
+    </div> -->
